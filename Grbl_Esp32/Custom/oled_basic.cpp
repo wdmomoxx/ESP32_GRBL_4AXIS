@@ -44,6 +44,7 @@
 
 #include "SSD1306Wire.h"
 #include "../src/WebUI/WebSettings.h"
+#include "../Custom/logo.h"
 
 #ifndef OLED_ADDRESS
 #    define OLED_ADDRESS 0x3c
@@ -103,9 +104,9 @@ void displayRadioInfo() {
 
     } else {  // print next to status
         if (WebUI::wifi_radio_mode->get() == ESP_BT) {
-            display.drawString(55, 2, radio_name);
+            display.drawString(45, 2, radio_name);
         } else {
-            display.drawString(55, 2, radio_addr);
+            display.drawString(45, 2, radio_addr);
         }
     }
 }
@@ -267,7 +268,9 @@ void display_init() {
     while (display.getStringWidth(mach_name) > 128) {
         mach_name = mach_name.substring(0, mach_name.length() - 1);
     }
-    display.drawString(63, 0, mach_name);
+    //display.drawString(63, 0, mach_name);
+
+    display.drawXbm(0, 0, Logo_width, Logo_height, ESP32_GRBL_4AXIS_bits);
 
     display.display();
 
