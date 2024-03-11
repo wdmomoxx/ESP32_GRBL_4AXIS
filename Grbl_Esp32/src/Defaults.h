@@ -71,7 +71,7 @@
 #endif
 
 #ifndef DEFAULT_INVERT_PROBE_PIN
-#    define DEFAULT_INVERT_PROBE_PIN 0  // $6 boolean
+#    define DEFAULT_INVERT_PROBE_PIN 1  // $6 boolean
 #endif
 
 #ifndef DEFAULT_STATUS_REPORT_MASK
