@@ -28,7 +28,6 @@
 
 #define MACHINE_NAME            "ESP32 GRBL 4AXIS"
 #define DISPLAY_CODE_FILENAME   "Custom/oled_basic.cpp"
-#define MACHINE_LOGO            "Custom/logo.cpp"
 
 #define N_AXIS 4
 //#define N_AXIS 3
